@@ -31,7 +31,7 @@ wss.on("connection", (client, req) => {
     // const message = JSON.stringify(replyMessage);
 
     wss.clients.forEach((client) => {
-      client.send(message);
+      client.send(JSON.stringify(replyMessage));
     });
   });
 });
